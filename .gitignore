@@ -1,0 +1,13 @@
+# Matches the directories with the next names
+Library/
+Logs/
+UserSettings/
+.vscode/
+.vs/
+UserSettings/
+obj/
+Temp/
+
+# Matches the file with the next names
+Assembly-CSharp.csproj
+BoxingToTheLimit_Unity.sln
