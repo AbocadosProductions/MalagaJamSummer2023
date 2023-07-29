@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class CucarachaMovementController : MonoBehaviour
 {
@@ -14,15 +15,17 @@ public class CucarachaMovementController : MonoBehaviour
     private Vector2 rightMovementForce = new Vector2(0f, 0f);
     private Vector2 lastForce = new Vector2(0f, 0f);
     private Rigidbody2D cucharachaRb = null;
+    private float angle;
 
     private IEnumerator coroutine;
 
     void Start()
     {
         cucharachaRb = GetComponent<Rigidbody2D>();
-        leftMovementForce = new Vector2(xForce * (Mathf.Cos(transform.rotation.z) + Mathf.Sin(transform.rotation.z)), xForce * (Mathf.Cos(transform.rotation.z) + Mathf.Sin(transform.rotation.z)));
         rightMovementForce.x = xForce;
         rightMovementForce.y = yForce;
+        leftMovementForce.x = -xForce;
+        leftMovementForce.y = yForce;
     }
 
     void Update()
@@ -41,31 +44,28 @@ public class CucarachaMovementController : MonoBehaviour
     {
         if (leftMovement)
         {
-            //cucharachaRb.AddForce(leftMovementForce);
-            coroutine = Break(leftMovementForce);
-            StartCoroutine(coroutine);
-            ROTATOR();
+            cucharachaRb.AddRelativeForce(leftMovementForce);
+            ROTATOR(leftMovementForce.x);
         }
         else if (rightMovement)
         {
-            cucharachaRb.AddForce(rightMovementForce);
-            coroutine = Break(rightMovementForce);
-            StartCoroutine(coroutine);
+            cucharachaRb.AddRelativeForce(rightMovementForce);
+            ROTATOR(rightMovementForce.x);
         }
     }
 
-    private IEnumerator Break(Vector2 direction)
+    // TODO Renombrar
+    private void ROTATOR(float force)
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(breakTime);
-            cucharachaRb.AddForce(direction * new Vector2(-1f, -1f));
-            StopCoroutine(coroutine);
-        }
+        if (force > 0.0f) angle = -30.0f;
+        else angle = 30.0f;
+        transform.Rotate(0.0f, 0.0f, angle, Space.Self);
     }
 
-    private void ROTATOR()
+    // TODO Pasarlo a Evento
+    public void stop()
     {
-        transform.Rotate(0.0f, 0.0f, 30.0f, Space.Self);
+        cucharachaRb.velocity = Vector3.zero;
+        cucharachaRb.angularVelocity = 0.0f;
     }
 }
