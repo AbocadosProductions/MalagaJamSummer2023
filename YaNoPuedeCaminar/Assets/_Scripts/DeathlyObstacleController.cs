@@ -8,7 +8,6 @@ public class DeathlyObstacleController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            gameObject.GetComponent<GenericSoundController>().play();
             collision.GetComponent<DeathController>().Die();   
         }
     }

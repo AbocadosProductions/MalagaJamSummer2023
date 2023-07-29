@@ -6,6 +6,7 @@ public class CucarachaSoundPlayer : MonoBehaviour
 {
     [SerializeField] private AudioClip leftStep;
     [SerializeField] private AudioClip rightStep;
+    [SerializeField] private AudioClip death;
 
     public void playLeftStep()
     {
@@ -15,5 +16,10 @@ public class CucarachaSoundPlayer : MonoBehaviour
     public void playRightStep()
     {
         AudioController.instance.gameObject.GetComponent<AudioSource>().PlayOneShot(rightStep);
+    }
+
+    public void playDeath()
+    {
+        AudioController.instance.gameObject.GetComponent<AudioSource>().PlayOneShot(death);
     }
 }

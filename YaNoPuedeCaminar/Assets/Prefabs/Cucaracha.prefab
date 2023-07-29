@@ -198,3 +198,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftStep: {fileID: 8300000, guid: 2b05dc0cd967d1e4fa314dda70b6789a, type: 3}
   rightStep: {fileID: 8300000, guid: e6e9b6b3a480c144287d987755c40721, type: 3}
+  death: {fileID: 8300000, guid: 70210ba2b30b811489d687c440ef42e3, type: 3}
