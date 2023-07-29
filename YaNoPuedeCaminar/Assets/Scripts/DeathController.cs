@@ -8,11 +8,6 @@ public class DeathController : MonoBehaviour
     private Vector3 initialRotation = Vector3.zero;
     private float deathTime = 0.15f;
 
-    private void Start()
-    {
-
-    }
-
     public void Die()
     {
         gameObject.GetComponent<AnimatorController>().ChangeAnimationState("Death");
