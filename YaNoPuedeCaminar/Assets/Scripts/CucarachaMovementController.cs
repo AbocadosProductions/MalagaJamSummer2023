@@ -29,8 +29,12 @@ public class CucarachaMovementController : MonoBehaviour
 
     void Update()
     {
-        GetInputs();
-        HandleInputs();
+
+        if (GameManager.instance.state == GameState.Playing)
+        {
+            GetInputs();
+            HandleInputs();
+        }
     }
 
     private void GetInputs()

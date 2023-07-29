@@ -30,7 +30,7 @@ public class PauseMenuController : MonoBehaviour
             else
             {
                 GameManager.instance.UpdateGameState(GameState.Pause);
-                PauseMenuActivation(false);
+                PauseMenuActivation(true);
             }
 
         }
@@ -39,7 +39,16 @@ public class PauseMenuController : MonoBehaviour
     //TODO Pasarlo a evento
     private void PauseMenuActivation(bool active)
     {
-        GameObject.Find("PauseMenu").SetActive(active);
+        ActivateDeactivateChilds(active);
+    }
+
+    private void ActivateDeactivateChilds(bool setActive)
+    {
+        gameObject.transform.GetChild(0).gameObject.SetActive(setActive);
+        gameObject.transform.GetChild(1).gameObject.SetActive(setActive);
+        gameObject.transform.GetChild(2).gameObject.SetActive(setActive);
+        gameObject.transform.GetChild(3).gameObject.SetActive(setActive);
+        gameObject.transform.GetChild(4).gameObject.SetActive(setActive);
     }
 
     public void ContinueButton()
@@ -50,6 +59,7 @@ public class PauseMenuController : MonoBehaviour
 
     public void MainMenuButton()
     {
+        GameManager.instance.UpdateGameState(GameState.MainMenu);
         SceneController.instance.LoadLevel("Menu");
     }
 

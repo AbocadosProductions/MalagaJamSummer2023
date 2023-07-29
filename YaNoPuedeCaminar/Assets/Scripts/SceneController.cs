@@ -29,7 +29,7 @@ public class SceneController : MonoBehaviour
 
     private void Start()
     {
-        gameObject.GetComponent<DialogueBubbleController>().HideElement();
+        //gameObject.GetComponent<DialogueBubbleController>().HideElement();
     }
 
     public void LoadLevel(string targetLevel=null)
