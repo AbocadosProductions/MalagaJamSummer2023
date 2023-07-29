@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 8304885973620033152}
   - component: {fileID: 8304885973620033153}
   - component: {fileID: 8304885973620033154}
-  - component: {fileID: 2636384772240116202}
+  - component: {fileID: 3953394913895165941}
+  - component: {fileID: 6764477954755981828}
+  - component: {fileID: 8123908770367332367}
   m_Layer: 0
   m_Name: Ventilador
   m_TagString: Untagged
@@ -75,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: -912129309
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b3f1ad3a0979d634fb6ab76cb4312d95, type: 3}
+  m_Sprite: {fileID: 1133184080, guid: b94b4c900e21c98489e16657b749de63, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,8 +100,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84690995f6e89dd4fa3c2873528c61ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &2636384772240116202
-BoxCollider2D:
+--- !u!95 &3953394913895165941
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8304885973620033158}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6a1edc0133f50d8499211762a6e32178, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &6764477954755981828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8304885973620033158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e74f97b524b81af4692b6e0d2d432748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 9fbd5aa468e33db4eab24cb2e9c3151e, type: 3}
+--- !u!58 &8123908770367332367
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -108,19 +143,9 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.37, y: 1.83}
-    newSize: {x: 18.01, y: 6.83}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.03, y: -0.13000003}
   serializedVersion: 2
-  m_Size: {x: 1.6, y: 1.4}
-  m_EdgeRadius: 0
+  m_Radius: 0.8

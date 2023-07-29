@@ -47,11 +47,13 @@ public class CucarachaMovementController : MonoBehaviour
     {
         if (leftMovement)
         {
+            gameObject.GetComponent<CucarachaSoundPlayer>().playLeftStep();
             cucharachaRb.AddRelativeForce(leftMovementForce);
             ROTATOR(leftMovementForce.x);
         }
         else if (rightMovement)
         {
+            gameObject.GetComponent<CucarachaSoundPlayer>().playRightStep();
             cucharachaRb.AddRelativeForce(rightMovementForce);
             ROTATOR(rightMovementForce.x);
         }

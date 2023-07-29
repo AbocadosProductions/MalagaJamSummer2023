@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7430320863504272882}
   - component: {fileID: 7430320863504272881}
   - component: {fileID: 7430320863504272652}
+  - component: {fileID: 757969443259154937}
   m_Layer: 0
   m_Name: Globos
   m_TagString: Finish
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7430320863504272880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.72, y: -4.28, z: -1.0770782}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -124,3 +125,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a2b5d242ef192944b86ddbab1e628c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &757969443259154937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7430320863504272880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e74f97b524b81af4692b6e0d2d432748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 9fbd5aa468e33db4eab24cb2e9c3151e, type: 3}
