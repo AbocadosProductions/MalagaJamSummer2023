@@ -6,16 +6,29 @@ public class DeathController : MonoBehaviour
 {
     private Vector3 initialPosition = Vector3.zero;
     private Vector3 initialRotation = Vector3.zero;
-    private float deathTime = 0.25f;
+    private float deathTime = 0.15f;
+
+    private void Start()
+    {
+
+    }
 
     public void Die()
     {
         gameObject.GetComponent<AnimatorController>().ChangeAnimationState("Death");
-        Invoke("RestartLevel", 0.15f);
+        Invoke("RestartLevel", deathTime);
+    }
+
+    private void LoadLevelData()
+    {
+        initialPosition =  SceneController.instance.GetInitialPosition();
+        initialRotation =  SceneController.instance.GetInitialRotation();
     }
 
     private void RestartLevel()
     {
+        SceneController.instance.LoadLevelData();
+        LoadLevelData();
         gameObject.GetComponent<AnimatorController>().ChangeAnimationState("Idle");
         gameObject.transform.position = initialPosition;
         gameObject.transform.eulerAngles = initialRotation;

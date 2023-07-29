@@ -6,6 +6,6 @@ public class CreditsMenuController : MonoBehaviour
 {
     public void MainMenuButton()
     {
-        //SceneController.instance.LoadMainMenu();
+        SceneController.instance.LoadLevel("Menu");
     }
 }

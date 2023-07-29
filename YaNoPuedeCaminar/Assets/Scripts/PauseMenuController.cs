@@ -21,18 +21,18 @@ public class PauseMenuController : MonoBehaviour
     {
         if (hasToPauseUnpause)
         {
-            /*
+
             if(GameManager.instance.state == GameState.Pause)
             {
-                GameManager.instance.ChangeState(Playing);
+                GameManager.instance.UpdateGameState(GameState.Playing);
                 PauseMenuActivation(false);
             }
             else
             {
-                GameManager.instance.ChangeState(Pause);
+                GameManager.instance.UpdateGameState(GameState.Pause);
                 PauseMenuActivation(false);
             }
-            */
+
         }
     }
 
@@ -44,12 +44,13 @@ public class PauseMenuController : MonoBehaviour
 
     public void ContinueButton()
     {
-        //GameManager.instance.ChangeState(Playing);
+        GameManager.instance.UpdateGameState(GameState.Playing);
+        PauseMenuActivation(false);
     }
 
     public void MainMenuButton()
     {
-        //SceneController.instance.LoadMainMenu();
+        SceneController.instance.LoadLevel("Menu");
     }
 
     public void ExitButton()

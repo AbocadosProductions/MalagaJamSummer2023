@@ -1,32 +1,68 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+    public static SceneController instance;
     private string nextScene;
-    //private Vector3 initialPosition = new Vector3(-9.0f, 4.0f, -1.0f);
-    //private Vector3 initialRotation = new Vector3(0.0f, 0.0f, 180.0f);
     private Vector3 initialPosition = Vector3.zero;
     private Vector3 initialRotation = Vector3.zero;
+    private GameObject initilizer;
 
 
-    public void NextLevel()
+    private void Awake()
     {
-        switch (SceneManager.GetActiveScene().name)
+        if (instance == null)
         {
-            case "Credits":
-                nextScene = "Main Menu";
-                break;
-
-            default:
-                nextScene = SceneUtility.GetScenePathByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1);
-                break;
+            DontDestroyOnLoad(gameObject);
+            instance = this;
         }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+        LoadLevelData();
+    }
+
+    private void Start()
+    {
+        //gameObject.GetComponent<DialogueBubbleController>().HideElement();
+    }
+
+    public void LoadLevel(string targetLevel=null)
+    {
+
+        if (targetLevel == null)
+        {
+            string nextScenePath = SceneUtility.GetScenePathByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1);
+            int slash = nextScenePath.LastIndexOf('/');
+            string sceneNameWithDot = nextScenePath.Substring(slash + 1);
+            int punto = sceneNameWithDot.LastIndexOf('.');
+            nextScene = sceneNameWithDot.Substring(0, punto);
+        }
+
+        else nextScene = targetLevel;
         SceneManager.LoadScene(nextScene);
     }
 
+    private void SetInitialPosition() {  initialPosition = initilizer.transform.position; }
+    private void SetInitialRotation() {  initialRotation = initilizer.transform.eulerAngles; }
+
     public Vector3 GetInitialPosition() { return initialPosition; }
     public Vector3 GetInitialRotation() { return initialRotation; }
+
+
+    public void LoadLevelData()
+    {
+        if (SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "Credits")
+        {
+            initilizer = GameObject.Find("InitValues");
+            SetInitialPosition();
+            SetInitialRotation();
+        }
+    }
+
 }

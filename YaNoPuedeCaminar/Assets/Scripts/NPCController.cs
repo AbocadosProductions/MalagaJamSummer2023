@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class CollectableObjectsController : MonoBehaviour
+public class NPCController : MonoBehaviour
 {
+
+    [SerializeField] string message;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            GameObject.Destroy(this.gameObject);
-            SceneController.instance.LoadLevel();
+            GameObject.Find("SceneManager").GetComponent<DialogueBubbleController>().ShowElement("Frasecilla");
         }
     }
 }

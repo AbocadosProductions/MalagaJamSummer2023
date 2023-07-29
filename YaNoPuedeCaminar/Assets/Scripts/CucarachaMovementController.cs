@@ -8,7 +8,6 @@ public class CucarachaMovementController : MonoBehaviour
 {
     private bool leftMovement = false;
     private bool rightMovement = false;
-    private float breakTime = 0.5f;
     private float xForce = 50f;
     private float yForce = 50f; 
     private Vector2 leftMovementForce = new Vector2(0f, 0f);

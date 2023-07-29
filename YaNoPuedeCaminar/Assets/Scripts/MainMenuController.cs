@@ -6,12 +6,12 @@ public class MainMenuController : MonoBehaviour
 {
     public void StartButton()
     {
-        //SceneController.instance.LoadFirstLevel();
+        SceneController.instance.LoadLevel("Level1");
     }
 
     public void CreditsButton()
     {
-        //SceneController.instance.LoadCredits();
+        SceneController.instance.LoadLevel("Credits");
     }
 
     public void ExitButton()
