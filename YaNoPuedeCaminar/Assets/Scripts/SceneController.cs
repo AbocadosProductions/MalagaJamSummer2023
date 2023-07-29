@@ -29,12 +29,11 @@ public class SceneController : MonoBehaviour
 
     private void Start()
     {
-        gameObject.GetComponent<DialogueBubbleController>().HideElement();
+        if (gameObject.TryGetComponent(out DialogueBubbleController controller)) { controller.HideElement(); }
     }
 
     public void LoadLevel(string targetLevel=null)
     {
-
         if (targetLevel == null)
         {
             string nextScenePath = SceneUtility.GetScenePathByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1);
