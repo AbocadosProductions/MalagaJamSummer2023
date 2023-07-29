@@ -7,7 +7,7 @@ public class TextTyperController : MonoBehaviour
 {
     private TMP_Text dialogueText;
 
-    private float waitSeconds = 0.05f;
+    private float waitSeconds = 0.08f;
 
     private IEnumerator typeLineCoroutine;
 
