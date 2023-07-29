@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1418375935
+    locked: 0
+  - name: CosasRecoger
+    uniqueID: 3837927639
+    locked: 0
+  - name: Player
+    uniqueID: 1343072443
+    locked: 0
+  - name: TopObjects
+    uniqueID: 3382837987
+    locked: 0
