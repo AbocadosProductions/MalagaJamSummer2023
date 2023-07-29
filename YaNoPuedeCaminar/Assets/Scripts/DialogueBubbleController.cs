@@ -19,6 +19,6 @@ public class DialogueBubbleController : MonoBehaviour
     public void ShowElement(string textToShow)
     {
         dialogueBubble.SetActive(true);
-        dialogueBubble.GetComponentInChildren<TMP_Text>().text = textToShow;
+        gameObject.GetComponent<TextTyperController>().showDialogue(textToShow, dialogueBubble.GetComponentInChildren<TMP_Text>());
     }
 }

@@ -15,4 +15,12 @@ public class NPCController : MonoBehaviour
             GameObject.Find("SceneManager").GetComponent<DialogueBubbleController>().ShowElement("Frasecilla");
         }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            GameObject.Find("SceneManager").GetComponent<DialogueBubbleController>().HideElement();
+        }
+    }
 }

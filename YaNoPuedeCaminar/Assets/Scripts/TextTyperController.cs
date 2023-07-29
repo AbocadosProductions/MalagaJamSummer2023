@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class TextTyperController : MonoBehaviour
 {
-    public TextMeshProUGUI dialogueText;
+    private TMP_Text dialogueText;
 
-    private float waitSeconds = 0.02f;
+    private float waitSeconds = 0.05f;
 
     private IEnumerator typeLineCoroutine;
 
@@ -23,12 +23,12 @@ public class TextTyperController : MonoBehaviour
 
     private void Start()
     {
-        dialogueText.text = string.Empty;
         typeLineCoroutine = TypeLine(string.Empty);
     }
 
-    public void showDialogue(string dialogue)
+    public void showDialogue(string dialogue, TMP_Text text)
     {
+        dialogueText = text;
         clearDialogueBox();
         typeLineCoroutine = TypeLine(dialogue);
         StartCoroutine(typeLineCoroutine);
