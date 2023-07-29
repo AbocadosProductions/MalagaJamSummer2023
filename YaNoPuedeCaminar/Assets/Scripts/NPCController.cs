@@ -12,7 +12,7 @@ public class NPCController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            GameObject.Find("SceneManager").GetComponent<DialogueBubbleController>().ShowElement("Frasecilla");
+            GameObject.Find("DialogueBubble").GetComponent<DialogueBubbleController>().ShowElement("Frasecilla");
         }
     }
 
@@ -20,7 +20,7 @@ public class NPCController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            GameObject.Find("SceneManager").GetComponent<DialogueBubbleController>().HideElement();
+            GameObject.Find("DialogueBubble").GetComponent<DialogueBubbleController>().HideElement();
         }
     }
 }

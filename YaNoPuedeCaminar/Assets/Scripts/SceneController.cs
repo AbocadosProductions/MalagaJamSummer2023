@@ -27,10 +27,7 @@ public class SceneController : MonoBehaviour
         LoadLevelData();
     }
 
-    private void Start()
-    {
-        if (gameObject.TryGetComponent(out DialogueBubbleController controller)) { controller.HideElement(); }
-    }
+
 
     public void LoadLevel(string targetLevel=null)
     {

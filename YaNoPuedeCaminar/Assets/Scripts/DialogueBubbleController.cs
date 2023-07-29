@@ -8,17 +8,16 @@ public class DialogueBubbleController : MonoBehaviour
     private GameObject dialogueBubble;
     private void Awake()
     {
-        dialogueBubble = GameObject.Find("DialogueBubble");
     }
 
     public void HideElement()
     {
-        dialogueBubble.SetActive(false);
+        gameObject.transform.GetChild(0).gameObject.SetActive(false);
     }
 
     public void ShowElement(string textToShow)
     {
-        dialogueBubble.SetActive(true);
-        gameObject.GetComponent<TextTyperController>().showDialogue(textToShow, dialogueBubble.GetComponentInChildren<TMP_Text>());
+        gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        gameObject.GetComponent<TextTyperController>().showDialogue(textToShow, gameObject.transform.GetChild(0).gameObject.GetComponentInChildren<TMP_Text>());
     }
 }
