@@ -14,6 +14,7 @@ public class DeathController : MonoBehaviour
 
     public void Die()
     {
+        GameManager.instance.UpdateGameState(GameState.Death);
         gameObject.GetComponent<CucarachaSoundPlayer>().playDeathMultiSound();
         gameObject.GetComponent<AnimatorController>().ChangeAnimationState("Death");
         Invoke("RestartLevel", deathTime);
@@ -49,5 +50,6 @@ public class DeathController : MonoBehaviour
         gameObject.transform.position = initialPosition;
         gameObject.transform.eulerAngles = initialRotation;
         ResetCamera();
+        GameManager.instance.UpdateGameState(GameState.Playing);
     }
 }
