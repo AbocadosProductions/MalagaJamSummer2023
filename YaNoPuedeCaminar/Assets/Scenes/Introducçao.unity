@@ -161,7 +161,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -9, y: -380}
-  m_SizeDelta: {x: 500, y: 170}
+  m_SizeDelta: {x: 500, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &414553534
 MonoBehaviour:
@@ -239,8 +239,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 90782ac654fc58e4c92c67b541bf612f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -292,7 +292,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 17}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &756318392
@@ -317,7 +317,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Empezar
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4d41ad4c900d7a04b9d0b6b164abaa0a, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &756318393
@@ -872,7 +872,7 @@ Transform:
   m_GameObject: {fileID: 1560724398}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.2516, y: 0.5545, z: 0}
-  m_LocalScale: {x: 1.3271018, y: 1.98215, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1523350787}
@@ -919,8 +919,8 @@ SpriteRenderer:
   m_SortingLayerID: 1418375935
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8c8cd3c589522f54382db3bd55c6e0cc, type: 3}
-  m_Color: {r: 0.46752223, g: 0.9245283, b: 0.08198643, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 6aa4fb904b82b284badece51ddcff1a7, type: 3}
+  m_Color: {r: 0.83, g: 0.83, b: 0.83, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1093,26 +1093,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueBubble
       objectReference: {fileID: 0}
-    - target: {fileID: 1315749774185007179, guid: e8d76e9b84d0df14094d0e26e10a2e09, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1315749774527152680, guid: e8d76e9b84d0df14094d0e26e10a2e09, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1315749774778606496, guid: e8d76e9b84d0df14094d0e26e10a2e09, type: 3}
-      propertyPath: m_text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1315749774778606496, guid: e8d76e9b84d0df14094d0e26e10a2e09, type: 3}
-      propertyPath: m_margin.x
-      value: 209.70782
-      objectReference: {fileID: 0}
-    - target: {fileID: 1315749774778606496, guid: e8d76e9b84d0df14094d0e26e10a2e09, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4278190080
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8d76e9b84d0df14094d0e26e10a2e09, type: 3}
 --- !u!224 &1780012282 stripped
@@ -1137,10 +1117,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 955153922}
     m_Modifications:
-    - target: {fileID: 1140446838687895124, guid: 54f52ea01947ff54c855e310110a6ae1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1140446839427908662, guid: 54f52ea01947ff54c855e310110a6ae1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1229,14 +1205,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueBubble3
       objectReference: {fileID: 0}
-    - target: {fileID: 1140446839427908663, guid: 54f52ea01947ff54c855e310110a6ae1, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2130718472460611878, guid: 54f52ea01947ff54c855e310110a6ae1, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e1cf2cc6787f88b40bdedce676e0cf92, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54f52ea01947ff54c855e310110a6ae1, type: 3}
 --- !u!1001 &4191123717620658134
@@ -1246,22 +1214,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 955153922}
     m_Modifications:
-    - target: {fileID: 2912605898374700780, guid: 8b81be15b503f254ebe5a48f429d81fe, type: 3}
-      propertyPath: m_text
-      value: "Hay algo que celebrar...\\r\\n\xBFNos ayudas?"
-      objectReference: {fileID: 0}
-    - target: {fileID: 2912605898374700780, guid: 8b81be15b503f254ebe5a48f429d81fe, type: 3}
-      propertyPath: m_margin.x
-      value: 212.72522
-      objectReference: {fileID: 0}
-    - target: {fileID: 2912605898374700780, guid: 8b81be15b503f254ebe5a48f429d81fe, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 4278190080
-      objectReference: {fileID: 0}
-    - target: {fileID: 2912605898626285412, guid: 8b81be15b503f254ebe5a48f429d81fe, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2912605899228411142, guid: 8b81be15b503f254ebe5a48f429d81fe, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1350,13 +1302,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueBubble2
       objectReference: {fileID: 0}
-    - target: {fileID: 2912605899228411143, guid: 8b81be15b503f254ebe5a48f429d81fe, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4191123718250332182, guid: 8b81be15b503f254ebe5a48f429d81fe, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: aee09998f148b1642b9da15155ed6f8e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b81be15b503f254ebe5a48f429d81fe, type: 3}
