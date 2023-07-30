@@ -15,14 +15,26 @@ EditorBuildSettings:
     path: Assets/Scenes/Nivel1.unity
     guid: fda1aa5e1ed1d9b42957cc88d96e69a2
   - enabled: 1
+    path: Assets/Scenes/TurboGlobo.unity
+    guid: c6eab54186af82344bfd3cf27f01695a
+  - enabled: 1
     path: Assets/Scenes/Nivel2.unity
     guid: a738c3eca35846542b3e6b65142244e3
+  - enabled: 1
+    path: Assets/Scenes/TurboTarta.unity
+    guid: d6ba1355dbf80be4e9fbc399d99d9b62
   - enabled: 1
     path: Assets/Scenes/Nivel3.unity
     guid: 8c04dc6003cf5d347bf6a28c71dfd904
   - enabled: 1
+    path: Assets/Scenes/TurboConfeti.unity
+    guid: d88577f3937a6524fadd7a5a1945b8ca
+  - enabled: 1
     path: Assets/Scenes/Nivel4.unity
     guid: d64166f5f212a9146abb2a7949632b45
+  - enabled: 1
+    path: Assets/Scenes/TurboPancarta.unity
+    guid: 8b368d416b5230f48a5742f686b88a74
   - enabled: 1
     path: Assets/Scenes/EndScreen.unity
     guid: 1dc05f2096044b740b8da177f0f52a5a

@@ -10,9 +10,12 @@ public class CollectableObjectsController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            GameObject.Find("ObjectControl").GetComponent<animatorobject>().SetVariable();
             gameObject.GetComponent<GenericSoundController>().play();
+            GameManager.instance.UpdateGameState(GameState.Animating);
             GameObject.Destroy(this.gameObject);
             SceneController.instance.LoadLevel();
         }
     }
+
 }

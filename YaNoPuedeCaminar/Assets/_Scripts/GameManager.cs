@@ -9,7 +9,8 @@ public enum GameState
     Playing,
     Pause,
     Death,
-    Credits
+    Credits,
+    Animating
 }
 
 public class GameManager : MonoBehaviour
