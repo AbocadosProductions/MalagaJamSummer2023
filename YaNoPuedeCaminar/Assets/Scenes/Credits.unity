@@ -658,8 +658,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -440.83374, y: -15}
-  m_SizeDelta: {x: 881.6763, y: 838.9147}
+  m_AnchoredPosition: {x: -440.84, y: -67.771}
+  m_SizeDelta: {x: 881.67, y: 944.46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &993273676
 MonoBehaviour:
@@ -683,7 +683,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Game designer\n - Anabel Garc\xEDa Aguilera\n\nArte\n - Luj\xE1n Garc\xEDa
     Escrihuela\n - Ana Morales Ruiz\n - Juanma Cabrera Cruz\n\nProgramadores\n -
-    Chuckity Chuck\n - Juanjo Garrido Bascar\xE1n\n\nTecnido de Sonido\n- Guillermo
+    Chuckity Chuck\n - Juanjo Garrido Bascar\xE1n\n\nT\xE9cnico de Sonido\n- Guillermo
     Morales Ruiz"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4d41ad4c900d7a04b9d0b6b164abaa0a, type: 2}
