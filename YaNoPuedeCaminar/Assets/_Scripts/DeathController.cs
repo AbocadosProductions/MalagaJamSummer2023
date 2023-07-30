@@ -7,7 +7,7 @@ public class DeathController : MonoBehaviour
 {
     private Vector3 initialPosition = Vector3.zero;
     private Vector3 initialRotation = Vector3.zero;
-    private float deathTime = 0.35f;
+    private float deathTime = 1.25f;
     [SerializeField] CinemachineVirtualCamera camToPrio = null;
     [SerializeField] CinemachineVirtualCamera camToUnPrio = null;
 
@@ -17,6 +17,7 @@ public class DeathController : MonoBehaviour
         gameObject.GetComponent<CucarachaSoundPlayer>().playDeathMultiSound();
         gameObject.GetComponent<AnimatorController>().ChangeAnimationState("Death");
         Invoke("RestartLevel", deathTime);
+        gameObject.GetComponent<CucarachaMovementController>().stop();
     }
 
     private void LoadLevelData()
@@ -27,14 +28,10 @@ public class DeathController : MonoBehaviour
 
     private void RestartLevel()
     {
-        ResetCamera();
+        gameObject.GetComponent<AnimatorController>().ChangeAnimationState("Idle");
         SceneController.instance.LoadLevelData();
         LoadLevelData();
-        gameObject.GetComponent<AnimatorController>().ChangeAnimationState("Idle");
-        gameObject.transform.position = initialPosition;
-        gameObject.transform.eulerAngles = initialRotation;
-        gameObject.GetComponent<CucarachaMovementController>().stop();
-
+        Invoke("MovePosition", 0.25f);
     }
 
     private void ResetCamera()
@@ -45,5 +42,12 @@ public class DeathController : MonoBehaviour
             camToUnPrio.Priority = 0;
         }
 
+    }
+
+    private void MovePosition()
+    {
+        gameObject.transform.position = initialPosition;
+        gameObject.transform.eulerAngles = initialRotation;
+        ResetCamera();
     }
 }

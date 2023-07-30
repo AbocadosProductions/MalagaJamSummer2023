@@ -1340,10 +1340,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 20.24
       objectReference: {fileID: 0}
-    - target: {fileID: 1382423172363025535, guid: 5d5e5bdacc79be349b5df12af52b9e81, type: 3}
-      propertyPath: message
-      value: Date prisa, no llegues tarde
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d5e5bdacc79be349b5df12af52b9e81, type: 3}
 --- !u!1001 &1170180822

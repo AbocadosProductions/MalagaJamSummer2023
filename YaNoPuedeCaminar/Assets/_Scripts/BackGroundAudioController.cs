@@ -21,6 +21,11 @@ public class BackGroundAudioController : MonoBehaviour
 
     public void BackGroundPlay()
     {
+        Invoke("AudioTramposo", 0.25f);
+    }
+
+    public void AudioTramposo()
+    {
         BackGroundAudioController.instance.gameObject.GetComponent<AudioSource>().PlayOneShot(backgroundAudioClip);
     }
 }
