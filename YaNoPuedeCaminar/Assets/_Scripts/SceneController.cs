@@ -56,7 +56,27 @@ public class SceneController : MonoBehaviour
             initilizer = GameObject.Find("InitValues");
             SetInitialPosition();
             SetInitialRotation();
-            GameObject.Find("BackgroundAudioSource").GetComponent<BackGroundAudioController>().BackGroundPlay();
+            
+        }
+        if (SceneManager.GetActiveScene().name == "Nivel1")
+        {
+            GameObject.Find("BackgroundAudioSource").GetComponent<BackGroundAudioController>().BackGroundPlay(1);
+        }
+        if (SceneManager.GetActiveScene().name == "Nivel2")
+        {
+            GameObject.Find("BackgroundAudioSource").GetComponent<BackGroundAudioController>().BackGroundPlay(2);
+        }
+        if (SceneManager.GetActiveScene().name == "Nivel3")
+        {
+            GameObject.Find("BackgroundAudioSource").GetComponent<BackGroundAudioController>().BackGroundPlay(3);
+        }
+        if (SceneManager.GetActiveScene().name == "Nivel4")
+        {
+            GameObject.Find("BackgroundAudioSource").GetComponent<BackGroundAudioController>().BackGroundPlay(4);
+        }
+        if (SceneManager.GetActiveScene().name == "EndScreen")
+        {
+            GameObject.Find("BackgroundAudioSource").GetComponent<BackGroundAudioController>().BackGroundPlay(5);
         }
     }
 

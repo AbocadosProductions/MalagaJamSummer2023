@@ -15,6 +15,7 @@ public class CollectableObjectsController : MonoBehaviour
             GameManager.instance.UpdateGameState(GameState.Animating);
             GameObject.Destroy(this.gameObject);
             SceneController.instance.LoadLevel();
+            BackGroundAudioController.instance.gameObject.GetComponent<AudioSource>().Stop();
         }
     }
 

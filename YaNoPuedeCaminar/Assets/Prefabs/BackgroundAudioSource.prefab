@@ -53,8 +53,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 1333.2566
+  MaxDistance: 2693.4692
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -141,4 +141,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4725bc2bdd39c9b43af9356ead9691a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundAudioClip: {fileID: 8300000, guid: d9f190e565bb24043a146f02be5361aa, type: 3}
+  backgroundAudioClipNivel1: {fileID: 8300000, guid: faea4e36e0220af48a54d674b43d1048, type: 3}
+  backgroundAudioClipNivel2: {fileID: 8300000, guid: d9f190e565bb24043a146f02be5361aa, type: 3}
+  backgroundAudioClipNivel3: {fileID: 8300000, guid: 28ca69768b9d39f4b959a35da6663073, type: 3}
+  backgroundAudioClipNivel4: {fileID: 8300000, guid: 6925b22df49e6e64da40b4292b632278, type: 3}
+  backgroundAudioClipFiesta: {fileID: 8300000, guid: 6631b89d7fa04ab4bbd00fae997a33a7, type: 3}
+  backgroundAudioClipMenu: {fileID: 8300000, guid: d4210a45d65c8d44d819882cf3793441, type: 3}

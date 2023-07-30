@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class MainMenuController : MonoBehaviour
 {
+    public void Start()
+    {
+        GameObject.Find("BackgroundAudioSource").GetComponent<BackGroundAudioController>().BackGroundPlay(6);
+    }
+
     public void StartButton()
     {
         GameManager.instance.UpdateGameState(GameState.Playing);
