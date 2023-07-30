@@ -27,8 +27,6 @@ public class SceneController : MonoBehaviour
         LoadLevelData();
     }
 
-
-
     public void LoadLevel(string targetLevel=null)
     {
         if (targetLevel == null)

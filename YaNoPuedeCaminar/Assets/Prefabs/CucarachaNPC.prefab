@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1382423172363025528}
   - component: {fileID: 1382423172363025531}
   - component: {fileID: 1382423172363025535}
+  - component: {fileID: 1088631714}
   m_Layer: 0
   m_Name: CucarachaNPC
   m_TagString: Untagged
@@ -141,4 +142,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b12b1abbab4d53c4dbfbf24ddcc95b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: Holiwi
+  message: Date prisa, no llegues tarde
+--- !u!95 &1088631714
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382423172363025530}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 24dc3a283c0e3374aad1b450c9614c0b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
