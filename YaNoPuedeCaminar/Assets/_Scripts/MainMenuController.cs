@@ -7,7 +7,7 @@ public class MainMenuController : MonoBehaviour
     public void StartButton()
     {
         GameManager.instance.UpdateGameState(GameState.Playing);
-        SceneController.instance.LoadLevel("Level1");
+        SceneController.instance.LoadLevel();
     }
 
     public void CreditsButton()

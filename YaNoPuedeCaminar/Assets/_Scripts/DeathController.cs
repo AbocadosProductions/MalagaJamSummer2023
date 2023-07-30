@@ -10,7 +10,7 @@ public class DeathController : MonoBehaviour
 
     public void Die()
     {
-        gameObject.GetComponent<CucarachaSoundPlayer>().playDeath();
+        gameObject.GetComponent<CucarachaSoundPlayer>().playDeathMultiSound();
         gameObject.GetComponent<AnimatorController>().ChangeAnimationState("Death");
         Invoke("RestartLevel", deathTime);
     }

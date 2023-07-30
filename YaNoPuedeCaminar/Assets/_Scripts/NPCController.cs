@@ -12,7 +12,7 @@ public class NPCController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            GameObject.Find("DialogueBubble").GetComponent<DialogueBubbleController>().ShowElement("Frasecilla");
+            GameObject.Find("DialogueBubble").GetComponent<DialogueBubbleController>().ShowElement(message);
         }
     }
 

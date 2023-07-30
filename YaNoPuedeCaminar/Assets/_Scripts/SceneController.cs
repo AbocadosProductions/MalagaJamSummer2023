@@ -53,7 +53,7 @@ public class SceneController : MonoBehaviour
 
     public void LoadLevelData()
     {
-        if (SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "Credits")
+        if (SceneManager.GetActiveScene().name != "Menu" && SceneManager.GetActiveScene().name != "Credits" && SceneManager.GetActiveScene().name != "Introducçao")
         {
             initilizer = GameObject.Find("InitValues");
             SetInitialPosition();
