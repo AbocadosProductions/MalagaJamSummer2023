@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7430320863504272881}
   - component: {fileID: 7430320863504272652}
   - component: {fileID: 757969443259154937}
+  - component: {fileID: 9029942561618120916}
   m_Layer: 0
   m_Name: Globos
   m_TagString: Finish
@@ -138,3 +139,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 9fbd5aa468e33db4eab24cb2e9c3151e, type: 3}
+--- !u!95 &9029942561618120916
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7430320863504272880}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e0de047a118afae4aba28a988528fdd0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0

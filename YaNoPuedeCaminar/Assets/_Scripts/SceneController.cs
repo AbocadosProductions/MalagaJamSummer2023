@@ -58,6 +58,7 @@ public class SceneController : MonoBehaviour
             initilizer = GameObject.Find("InitValues");
             SetInitialPosition();
             SetInitialRotation();
+            GameObject.Find("BackgroundAudioSource").GetComponent<BackGroundAudioController>().BackGroundPlay();
         }
     }
 

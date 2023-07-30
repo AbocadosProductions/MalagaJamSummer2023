@@ -10,4 +10,10 @@ public class GenericSoundController : MonoBehaviour
     {
         AudioController.instance.gameObject.GetComponent<AudioSource>().PlayOneShot(audioClip);
     }
+    public void stop()
+    {
+        AudioController.instance.gameObject.GetComponent<AudioSource>().Stop();
+    }
+
+
 }

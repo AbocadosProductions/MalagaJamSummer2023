@@ -17,13 +17,26 @@ public class TextTyperController : MonoBehaviour
 
     private GenericSoundController soundController = null;
 
+    private float playingTime = 0f;
+    private float maxplayingTime = 0.1f;
+
     private IEnumerator TypeLine(string dialogue)
     {
         foreach (char c in dialogue.ToCharArray())
         {
             Debug.Log(dialogue.ToCharArray().Count());
             dialogueText.text += c;
-            if (hasSoundToPlay ) { soundController.play(); }
+            if (hasSoundToPlay ) 
+            {
+                playingTime += Time.deltaTime;
+                
+                if (playingTime > maxplayingTime )
+                {
+                    soundController.stop();
+                    soundController.play();
+                    playingTime = 0f;
+                }
+            }
             yield return new WaitForSeconds(waitSeconds);
         }
     }
@@ -38,7 +51,13 @@ public class TextTyperController : MonoBehaviour
         dialogueText = text;
         clearDialogueBox();
         typeLineCoroutine = TypeLine(dialogue);
-        if (TryGetComponent<GenericSoundController>(out GenericSoundController sound)) { soundController = sound; }
+        if (TryGetComponent<GenericSoundController>(out GenericSoundController sound))
+        { 
+            hasSoundToPlay = true;
+            soundController = sound;
+            soundController.play();
+        }
+        else { hasSoundToPlay = false; }
         StartCoroutine(typeLineCoroutine);
     }
 

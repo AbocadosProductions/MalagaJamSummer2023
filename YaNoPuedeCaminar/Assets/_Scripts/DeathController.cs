@@ -6,7 +6,7 @@ public class DeathController : MonoBehaviour
 {
     private Vector3 initialPosition = Vector3.zero;
     private Vector3 initialRotation = Vector3.zero;
-    private float deathTime = 0.15f;
+    private float deathTime = 0.35f;
 
     public void Die()
     {
